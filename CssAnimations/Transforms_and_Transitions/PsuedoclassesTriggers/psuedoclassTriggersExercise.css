@@ -1,0 +1,14 @@
+/* :hover */
+button:hover {
+	background-color: green;
+}
+
+/* :focus */
+button:focus {
+	background-color: orange;
+}
+
+/* :active */
+button:active {
+	background-color: purple;
+}
