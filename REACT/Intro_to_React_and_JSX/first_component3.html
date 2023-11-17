@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./first_component.css">
+
+    <!-- REACT CDN -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.3/babel.js"
+            integrity="sha512-1wwq9/b1cPXLffenhLqPHGlsWD4Uck+/vZwTA6Qz4jmoQ0LIxYZutVsAlCFiVDrJ/bqq+26cwfPEWjQJ3eXwhQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <title>First React Component 2</title>
+  </head>
+
+  <body>
+    <!-- Refactored to use JSX -->
+    <div id="app"></div>
+
+    <script type="text/babel">
+
+      class Pet extends React.Component {
+        render() {
+          const liStyle = { fontSize: '1.5em' }
+          return (
+            <div className="card">
+              <h2 className="name">Moxie</h2>
+              <img src="https://github.com/tigarcia/Moxie/raw/master/moxie.png" alt="moxie my cat" />
+              <h5 style={ { fontSize: '2em', margin: '2px' } }>Hobbies:</h5>
+              <ul>
+                <li style={ liStyle }>Sleep</li>
+                <li style={ liStyle }>Eat</li>
+              </ul>
+            </div>
+          )
+        }
+      }
+      ReactDOM.render( < Pet />, document.getElementById( "app" ) );
+
+    </script>
+
+  </body>
+
+</html>
